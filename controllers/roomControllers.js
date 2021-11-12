@@ -1,4 +1,4 @@
-import roomModel from '../models/roomModel';
+import roomModel from '../models/roomModel.js';
 
 export const getTest = (_, res) => {
 	res.send({ name: 'hardcoders' });
