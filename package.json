@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Simon Libert",
   "license": "ISC",
@@ -15,6 +16,6 @@
     "mongoose": "^6.0.12"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.15"
   }
 }
