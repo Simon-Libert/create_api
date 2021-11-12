@@ -4,7 +4,7 @@ const roomSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: true,
-		trim: true,
+		trim: true, // remove whitespace
 		lowercase: true,
 	},
 	capacity: {
