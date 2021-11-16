@@ -25,7 +25,7 @@ userSchema.pre('save', async function (next) {
 });
 
 //Ajouter une méthode pour vérifier le password
-userSchema.methode.isValidPassword = async function (password) {
+userSchema.method.isValidPassword = async function (password) {
 	//methode means : ajouter une méthode (valide password)
 	const user = this;
 	const isMatch = await bcrypt.compare(password, user.password);

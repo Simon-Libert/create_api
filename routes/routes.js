@@ -1,4 +1,5 @@
 import express from 'express';
+import passport from 'passport';
 import {
 	getTest,
 	postTest,
@@ -29,5 +30,22 @@ router.get('/room/:id', catchErrors(getRoom)); // les : permet de recuperer l'id
 router.patch('/room/:id', catchErrors(updateRoom));
 
 router.delete('/room/:id', catchErrors(deleteRoom));
+
+// Authentification
+
+router.post(
+	'/signup',
+	passport.authenticate('signup', { session: false }),
+	async (req, res, next) => {
+		res.json({
+			message: 'Signup OK',
+			user: req.user,
+		});
+	}
+);
+
+router.get('/*', (_, res) => {
+	res.sendFile(path.join(__dirname, '../../client/build/index.html'));
+});
 
 export default router;
