@@ -1,3 +1,5 @@
+// controllers sont les fonctions qui vont permttre de faire des choses dans l'api, comme récupérer kles chambres...
+
 import roomModel from '../models/roomModel.js';
 
 export const getTest = (_, res) => {
